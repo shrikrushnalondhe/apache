@@ -22,7 +22,7 @@ CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 #RUN sed -E -i -e '/<Directory "\/var\/www\/html">/,/<\/Directory>/s/AllowOverride None/AllowOverride All/' /etc/httpd/conf/httpd.conf
 #RUN sed -E -i -e 's/DirectoryIndex (.*)$/DirectoryIndex index.php \1/g' /etc/httpd/conf/httpd.conf
 
-EXPOSE 8081
+EXPOSE 80
 
 # Start Apache
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
